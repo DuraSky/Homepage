@@ -1,16 +1,71 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+    font-family: "Roboto", sans-serif;
+
+}
+
+#content{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+
+}
+
+h2, h3, h4, h5{
+   font-family: "Playfair", serif; 
+}
+
 
 
   
   /* Mobile Styles */
   @media only screen and (max-width: 400px) {
-    body {
-      background-color: #F09A9D; /* Red */
+
+    .aboutMe::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%) rotate(-30deg) skew(-30deg);
+      width: calc(100vw + 100px); /* Adjust the width */
+      height: 100%;
+      background: #A7C7E7;
+      z-index: -1;
+      box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
     }
+
+    .aboutMe>picture{
+      z-index: 1;
+      box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.1);      
+    }
+
+    .section{
+      justify-content: center;
+      padding-top: 20px;
+      padding: 10px;
+      margin-bottom: 70px;
+    }
+
+    #textAboutMe > h2{
+      text-align: center;
+    }
+
+    .icons{
+      margin-top: 10px;
+    }
+
+
   }
   
   /* Tablet Styles */
