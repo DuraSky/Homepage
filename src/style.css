@@ -39,6 +39,19 @@ h2, h3, h4, h5{
   font-family: "Roboto", sans-serif;
 }
 
+.aboutMe::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%) skewY(-5deg);
+  width: 100%; /* Adjust the width */
+  height: 30%;
+  background: #4086cb;
+  z-index: -1;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;    
+}
+
 .description{
   display: flex;
   flex-wrap: wrap;
@@ -69,17 +82,6 @@ footer>h2{
   /* Mobile Styles */
   @media only screen and (max-width: 400px) {
 
-    .aboutMe::before {
-      content: '';
-      position: absolute;
-      top: -10%;
-      left: 50%;
-      transform: translateX(-50%) skewY(-20deg);
-      height: 30%;
-      width: 100%;
-      background: #4086cb;
-      z-index: -1;
-      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;    }
 
     .aboutMe>picture{
       margin-bottom: 20px;
@@ -104,6 +106,7 @@ footer>h2{
       margin-top: 10px;
       display: flex;
       gap: 10px;
+      justify-content: center;
     }
 
     h2{
@@ -124,23 +127,12 @@ footer>h2{
     }
 
 
+
+
   }
   
   /* Tablet Styles */
   @media only screen and (min-width: 401px) and (max-width: 960px) {
-
-    .aboutMe::before {
-      content: '';
-      position: absolute;
-      top: -10%;
-      left: 50%;
-      transform: translateX(-50%) skewY(-20deg);
-      width: 100%; /* Adjust the width */
-      height: 30%;
-      background: #4086cb;
-      z-index: -1;
-      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;    
-    }
 
     .aboutMe{
       display: flex;
@@ -148,22 +140,25 @@ footer>h2{
       padding: 20px;
 
       align-items: flex-end;
-      gap: 20px;
       margin-bottom: 20px;
-      min-width: 700px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .aboutMe>picture{
       z-index: 1;
-      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;    }
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;    
+    }
 
-    .aboutMe>.icons{
+    #textAboutMe>.icons{
       display: none;
     }
 
     #textAboutMe{
       background-color: white;
       height: 50%;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;    
+      padding: 20px;
     }
 
     h2{
@@ -185,7 +180,7 @@ footer>h2{
     .project{
       width: 40%;
 
-       min-width: 300px; 
+      min-width: 300px; 
     }
 
     footer{
@@ -219,7 +214,77 @@ footer>h2{
   
   /* Desktop Styles */
   @media only screen and (min-width: 961px) {
-    body {
-      background-color: #B2D6FF; /* Blue */
+
+    header{
+      width: 100%;
     }
+    .aboutMe{
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+      
+      padding-top: 50px;
+      margin-bottom: 50px;
+      min-width: 700px;
+    }
+
+    .aboutMe>img{
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;    
+    }
+
+    #textAboutMe{
+      background-color: white;
+      padding: 20px;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;    
+      max-width: 400px;
+    }
+
+    #textAboutMe>.icons{
+      padding: 10px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 5px;
+    }
+
+    h2{
+    font-size: 2rem;
+    }
+
+    section{
+      width: 100%;
+    }
+
+    .myWork{
+      justify-content: center;
+      gap: 40px;
+
+      margin-bottom: 50px;
+
+    }
+
+    .myWork>h2{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .project{
+      margin-bottom: 20px;
+      max-width: 350px;
+    }
+
+    footer{
+      width: 100%;
+    }
+
+    .contactMe{
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contactMe>img{}
+
+
   }
